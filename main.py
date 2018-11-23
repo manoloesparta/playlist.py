@@ -1,8 +1,8 @@
-from songxalbum.auth import auth
-from songxalbum.remove import removeSongs
-from songxalbum.albums import getAlbums
-from songxalbum.selectAlbums import selectAlbums
-from songxalbum.selectSongs import selectSongs
+from updateplaylist.auth import auth
+from updateplaylist.remove import removeSongs
+from updateplaylist.albums import getAlbums
+from updateplaylist.selectAlbums import selectAlbums
+from updateplaylist.selectSongs import selectSongs
 
 playlist_retrieved = '1ofx1iXeCqb5gPuEWSanfc'
 playlist_goal = '0iYFyrLsby2E0QBBPs2xWi'
