@@ -5,8 +5,8 @@ from updateplaylist.albums import getAlbums
 from updateplaylist.selectAlbums import selectAlbums
 from updateplaylist.selectSongs import selectSongs
 
-playlist_retrieved = environ['playlist_retrieved']
-playlist_goal = environ['playlist_goal']
+playlist_retrieved = '1ofx1iXeCqb5gPuEWSanfc'
+playlist_goal = '0iYFyrLsby2E0QBBPs2xWi'
 
 username = environ['username']
 scope = 'playlist-modify-private'
@@ -23,7 +23,6 @@ def main():
 	tracks = selectSongs(Spotify, albums['albums_selected'], albums['albums_selected_name'], albums['albums_selected_artist'])
 
 	Spotify.user_playlist_add_tracks(username, playlist_goal, tracks['tracks_id'])
-
 
 if __name__ == '__main__':
 

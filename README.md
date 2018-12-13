@@ -13,12 +13,12 @@ This uses spotipy library so in order to use you need to setup some enviroment v
 export SPOTIPY_CLIENT_ID='Client ID'
 export SPOTIPY_CLIENT_SECRET='Client Secret'
 export SPOTIPY_REDIRECT_URI='http://google.com/'
-```
-And some other enviroment variables setup by me in order for this to work
-```
-export playlist_retrieved='uri of playlist from which you are retrieving the albums'
-export playlist_goal='uri of the playlist which you are appending the songs'
 export username='your spotify account username'
+```
+If you want to feed it with your own playlist edit the following variables in the _main.py_ file
+```
+playlist_retrieved = 'uri of playlist retrieved'
+playlist_goal = 'uri of playlist goal'
 ```
 _I recommend adding this to your .bash_profile_
 
