@@ -1,9 +1,9 @@
 from os import environ
-from updateplaylist.auth import auth
-from updateplaylist.remove import removeSongs
-from updateplaylist.albums import getAlbums
-from updateplaylist.selectAlbums import selectAlbums
-from updateplaylist.selectSongs import selectSongs
+from playlist.auth import auth
+from playlist.remove import removeSongs
+from playlist.albums import getAlbums
+from playlist.selectAlbums import selectAlbums
+from playlist.selectSongs import selectSongs
 
 playlist_retrieved = '1ofx1iXeCqb5gPuEWSanfc'
 playlist_goal = '0iYFyrLsby2E0QBBPs2xWi'
