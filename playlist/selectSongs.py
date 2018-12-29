@@ -3,7 +3,6 @@ from spotipy import util
 from random import randint
 
 def selectSongs(Spotify, albums_selected, albums_selected_names, albums_selected_artist):
-
 	tracks_ids = []
 	tracks_names = []
 

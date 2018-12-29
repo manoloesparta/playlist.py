@@ -1,5 +1,4 @@
 def getAlbums(Spotify, username, playlist_retrieved):
-	
 	results = Spotify.user_playlist_tracks(username, playlist_retrieved)
 	tracks = results['items']
 	while results['next']:

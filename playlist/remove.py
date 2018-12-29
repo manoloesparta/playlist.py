@@ -1,5 +1,4 @@
 def removeSongs(Spotify, username, playlist_goal):
-
 	results = Spotify.user_playlist_tracks(username, playlist_goal)
 	tracks = results['items']
 	

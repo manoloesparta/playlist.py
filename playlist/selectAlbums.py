@@ -1,7 +1,6 @@
 from random import randint
 
 def selectAlbums(albums_uri, albums_name, albums_artist):
-
 	albums_selected = []
 	albums_selected_names = []
 	albums_selected_artist = []
