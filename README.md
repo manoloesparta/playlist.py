@@ -4,8 +4,10 @@ I tend to listen a lot of albums, but I have more than a 130 albums pending to l
 It selects randomly 100 albums out of the 130+, and from each selected album, it selects one song randomly, appending all the songs to this other [playlist](https://open.spotify.com/user/manoloesparta/playlist/0iYFyrLsby2E0QBBPs2xWi?si=Yv6aajgYTTyMnEj4jbljWA). This is the playlist I listen daily.
 
 ## Requirements
+Made with Python 3:D
 ```
 git clone https://github.com/manoloesparta/updateplaylist
+cd updateplaylist/
 pip install -r requirements.txt
 ```
 This uses spotipy library so in order to use you need to setup some enviroment variables, that you get from an application from [here](https://developer.spotify.com/dashboard/applications)
@@ -25,7 +27,7 @@ _I recommend adding this to your .bash_profile_
 ## Usage
 In order to run the program just type
 ```
-python3 main.py
+python main.py
 ```
 
 ## License
