@@ -4,9 +4,7 @@ class Goal:
         self.spotify_user = spotify_user
 
     def _remove(self):
-        """
-        Removes current songs from playlist
-        """
+        """ Removes current songs from playlist """
         data = self.spotify_user.user.user_playlist_tracks(
             self.spotify_user.username, self.playlist_goal)
         actual_tracks = data['items']
@@ -19,10 +17,8 @@ class Goal:
        	    self.spotify_user.username, self.playlist_goal, removed)
 
     def update(self, source):
-        """
-        Updates playlist with new randomly selected songs, 
-        source parameter is a Source object
-        """
+        """ Updates playlist with new randomly selected songs, 
+        source parameter is a Source object """
         self._remove()
         self.spotify_user.user.user_playlist_add_tracks(
             self.spotify_user.username, self.playlist_goal, source.tracks_uri)
