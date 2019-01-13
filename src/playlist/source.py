@@ -8,11 +8,14 @@ class Source:
         self.albums_uri = []
         self.tracks_uri = []
 
-        self.load_albums()
-        self.select_albums()
-        self.select_songs()
+        self._load_albums()
+        self._select_albums()
+        self._select_songs()
 
-    def load_albums(self):
+    def _load_albums(self):
+        """
+        Loads all the albums from self.playlist_src
+        """
         results = self.spotify_user.user.user_playlist_tracks(
             self.spotify_user.username, self.playlist_src)
         tracks = results['items']
@@ -23,11 +26,16 @@ class Source:
         for track in tracks:
             self.albums_uri.append(track['track']['album']['id'])
 
-    def select_albums(self):
+        self.tracks_num = 100 if len(tracks) > 100 else len(tracks)
+
+    def _select_albums(self):
+        """
+        Select 100 or less albums randomly from self.albums_uri
+        """
         random_nums = []
         temp_albums = []
 
-        for _ in range(100):
+        for _ in range(self.tracks_num):
             choice = randint(0, len(self.albums_uri) - 1)
             while choice in random_nums:
                 choice = randint(0, len(self.albums_uri) - 1)
@@ -36,7 +44,11 @@ class Source:
 
         self.albums_uri = temp_albums
 
-    def select_songs(self):
+    def _select_songs(self):
+        """
+        Select one song of each randomly selected album of 
+        self.albums_uri
+        """
         for i in tqdm(range(len(self.albums_uri))):
             set_list = self.spotify_user.user.album_tracks(
                 self.albums_uri[i])
