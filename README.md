@@ -59,7 +59,7 @@ _All this data is invented_
 In order to build succesfully the docker image and run the src/main.py exactly as it is you need to build it with some enviroment variables. You can build it with this command:
 ```bash
 docker build -t playlist.py \
---build-arg user='manoloesparta' \
+--build-arg user='username' \
 --build-arg c_id='8589a322e8b142a0bf76ac9da43cfb92' \
 --build-arg c_secret='cd0629c79f544c959ebbbbb23fd0239b' \
 --build-arg p_src='1ofx1iXeCqb5gPuEWSanfc' \
