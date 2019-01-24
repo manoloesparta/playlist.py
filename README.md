@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-	<a href="https://github.com/ClarkThyLord/Voxly/releases">
+	<a href="https://github.com/manoloesparta/playlist.py/releases">
 		<img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
 	</a>
   <a>
