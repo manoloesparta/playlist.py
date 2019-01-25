@@ -80,10 +80,11 @@ In order to build succesfully the docker image and run the src/main.py exactly a
 ```bash
 docker build -t playlist.py \
 --build-arg user='username' \
---build-arg c_id='8589a322e8b142a0bf76ac9da43cfb92' \
---build-arg c_secret='cd0629c79f544c959ebbbbb23fd0239b' \
---build-arg p_src='1ofx1iXeCqb5gPuEWSanfc' \
---build-arg p_goal='0iYFyrLsby2E0QBBPs2xWi' .
+--build-arg id='8589a322e8b142a0bf76ac9da43cfb92' \
+--build-arg secret='cd0629c79f544c959ebbbbb23fd0239b' \
+--build-arg uri='http://google.com/' \
+--build-arg src='1ofx1iXeCqb5gPuEWSanfc' \
+--build-arg goal='0iYFyrLsby2E0QBBPs2xWi' .
 ```
 For running the docker image:
 ```bash

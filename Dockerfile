@@ -7,15 +7,20 @@ RUN apt-get update && apt-get install vim -y
 
 COPY [".", "."]
 
+# User info
 ARG user
 ENV USERNAME=${user}
-ARG c_id
-ENV CLIENT_ID=${c_id}
-ARG c_secret
-ENV CLIENT_SECRET=${c_secret}
-ARG p_src
-ENV PLAYLIST_SRC=${p_src}
-ARG p_goal
-ENV PLAYLIST_GOAL=${p_goal}
+ARG id
+ENV CLIENT_ID=${id}
+ARG secret
+ENV CLIENT_SECRET=${secret}
+
+# Playlist stuff
+ARG src
+ENV PLAYLIST_SRC=${src}
+ARG goal
+ENV PLAYLIST_GOAL=${goal}
+ARG uri
+ENV REDIRECT_URI=${uri}
 
 CMD ["python", "main.py"]
